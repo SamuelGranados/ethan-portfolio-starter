@@ -22,6 +22,8 @@ const Header = () => {
           priority={true}
          />
         </Link>
+        {/* socials */}
+        <Socials />
       </div>
       </div>
     </header>
