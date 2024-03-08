@@ -17,7 +17,7 @@ const Home = () => {
     <div className='bg-primary/60 h-full'>
       {/* text */}
       <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
-        <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'>
+        <div className='text-center flex flex-col justify-center xl:pt-28 xl:text-left h-full container mx-auto'>
           {/* title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
@@ -33,7 +33,7 @@ const Home = () => {
             initial="hidden"
             animate='show'
             exit='hidden'
-            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>“Navegando pela Odisséia Digital: A Arte de Transformar Visões em Realidades Virtuais” “Entre Códigos e Pixels: Desvendando o Labirinto da Inovação Tecnológica” “Além da Imaginação: Engenharia de Sonhos em Estruturas de Dados” “Quando a Fantasia se Encontra com a Funcionalidade: A Sinfonia da Criação Digital” “Ecos do Futuro: Compondo o Legado da Era Informacional” “Arquitetando o Intangível: Tecendo a Tapeçaria da Tecnologia Transformadora”
+            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-8 xl:mb-16'>“Navegando pela Odisséia Digital: A Arte de Transformar Visões em Realidades Virtuais” “Entre Códigos e Pixels: Desvendando o Labirinto da Inovação Tecnológica”
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
@@ -64,7 +64,7 @@ const Home = () => {
           animate='show'
           exit='hidden'
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className='w-full h-full max-w-[537px] max-h-[478] absolute -bottom-96 lg:right-[14%]'>
+          className='w-full h-full max-w-[437px] max-h-[478] absolute -bottom-52 lg:right-[10%]'>
           <Avatar />
         </motion.div>
       </div>

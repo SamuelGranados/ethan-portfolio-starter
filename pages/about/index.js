@@ -98,6 +98,9 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
+// counters 
+import CountUp from 'react-countup';
+
 const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
@@ -110,13 +113,24 @@ const About = () => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='hidden xl:flex absolute bottom-0-left-[370px]'>
-        {/*<Avatar />*/}
+        className='hidden xl:flex absolute -bottom-24 -left-[250px]'>
+        <Avatar />
       </motion.div>
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
-        <div className='flex-1 flex flex-col justify-center'>text</div>
+        {/* text */}
+        <div className='flex-1 flex flex-col justify-center'>
+          <h2 className='xl:h2 h3'>
+           <span className='text-accent'>Histórias</span> cativantes geram designs magníficos.
+          </h2>
+          <p className='xl:text-base text-sm max-w-[500px] mx-auto xl:mx-0 md:mb-6 mb-2 xl:mb-12 px-2 xl:px-0'>
+           Meu propósito é servir e ajudar pessoas, e acredito que através da tecnologia posso contribuir para a resolução de problemas complexos, por isso estou buscando uma oportunidade que possa oferecer trabalho em equipe e novos desafios de maneira que juntos consigamos mudar o mundo.
+          </p>
+          {/* counters */}
+          <div>counters</div>
+        </div>
+        {/* info */}
         <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
+          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 md:mt-12 mt-6'>
             {aboutData.map((item, itemIndex) => {
               return (
                 <div key={itemIndex}
@@ -131,20 +145,20 @@ const About = () => {
               );
             })}
           </div>
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4'>
+          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 md:mx-auto lg:mx-0'>
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div key={itemIndex}
-                className='flex-1 flex flex-col md:flex-row md:max-w-max gap-x-2 items-center text-white/60'
+                className='flex-1 flex flex-col md:flex-row gap-x-2 items-center text-white/60 '
                 >
                   {/* title */}
-                  <div>{item.title}</div>
+                  <div className='font-light mb-2 md:mb-0'>{item.title}</div>
                   <div className='hidden md:flex'>-</div>
                   <div>{item.stage}</div>
-                  <div className='flex justify-center gap-x-4'>
+                  <div className='flex gap-x-4'>
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl'>{icon}</div>;
+                      return <div className='text-2xl text-white'>{icon}</div>;
                     })}
                   </div>
                 </div>
